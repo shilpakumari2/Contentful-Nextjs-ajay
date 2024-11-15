@@ -1,8 +1,19 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
+First install the contentful package from node
 
-First, run the development server:
+```bash
+npm install contentful
+```
+
+Then Install the rich-text-react-renderer
+
+```bash
+npm install @contentful/rich-text-react-renderer
+```
+
+Next, to run the development server:
 
 ```bash
 npm run dev
