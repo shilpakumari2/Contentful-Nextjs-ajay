@@ -3,6 +3,13 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 ## Getting Started
 First install the contentful package from node
 
+create a .env.local file
+
+	* CONTENTFUL_SPACE_ID= 
+	* CONTENTFUL_ACCESS_TOKEN= 
+ 
+ Add these two in your environament
+
 ```bash
 npm install contentful
 ```
