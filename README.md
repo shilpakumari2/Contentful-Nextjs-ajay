@@ -3,7 +3,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 ## Getting Started
 
 create a .env.local file
- Add these two in your environament
+ Add these two API keys in your environament
 
 	* CONTENTFUL_SPACE_ID= 
 	* CONTENTFUL_ACCESS_TOKEN= 
