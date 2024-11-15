@@ -27,7 +27,9 @@ if the above one throws any error like
     npm ERR! node_modules/@contentful/rich-text-react-renderer
     npm ERR!   @contentful/rich-text-react-renderer@"*" from the root project
     ```
-It means we need to update our react
+
+    
+Then follow below commands
 ```bash
 	npm install @contentful/rich-text-react-renderer --legacy-peer-deps
 	npm uninstall react react-dom
