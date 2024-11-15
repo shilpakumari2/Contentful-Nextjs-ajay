@@ -13,6 +13,7 @@ Then Install the rich-text-react-renderer
 npm install @contentful/rich-text-react-renderer
 ```
 if the above one throws any error like
+
     ```
     npm ERR! code ERESOLVE
     npm ERR! ERESOLVE unable to resolve dependency tree
