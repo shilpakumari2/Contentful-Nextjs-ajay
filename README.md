@@ -1,14 +1,14 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
-First install the contentful package from node
 
 create a .env.local file
+ Add these two in your environament
 
 	* CONTENTFUL_SPACE_ID= 
 	* CONTENTFUL_ACCESS_TOKEN= 
  
- Add these two in your environament
+First install the contentful package from node
 
 ```bash
 npm install contentful
