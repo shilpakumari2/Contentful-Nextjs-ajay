@@ -1,6 +1,6 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';  // Import for rendering RichText
 import client from '../lib/contentful';
-import styles from '../styles/Home.module.css';
+import styles from '../styles/Home.css';
 
 
 const Home = ({ homePage }) => {
