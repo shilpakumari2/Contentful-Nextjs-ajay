@@ -12,6 +12,28 @@ Then Install the rich-text-react-renderer
 ```bash
 npm install @contentful/rich-text-react-renderer
 ```
+if the above one throws any error like
+    ```
+    npm ERR! code ERESOLVE
+    npm ERR! ERESOLVE unable to resolve dependency tree
+    npm ERR!
+    npm ERR! While resolving: contentful_nextjs@0.1.0
+    npm ERR! Found: react@19.0.0-rc-66855b96-20241106
+    npm ERR! node_modules/react
+    npm ERR!   react@"19.0.0-rc-66855b96-20241106" from the root project
+    npm ERR!
+    npm ERR! Could not resolve dependency:
+    npm ERR! peer react@"^16.8.6 || ^17.0.0 || ^18.0.0" from @contentful/rich-text-react-renderer@16.0.0
+    npm ERR! node_modules/@contentful/rich-text-react-renderer
+    npm ERR!   @contentful/rich-text-react-renderer@"*" from the root project
+    ```
+It means we need to update our react
+```bash
+	npm install @contentful/rich-text-react-renderer --legacy-peer-deps
+	npm uninstall react react-dom
+	npm install react@18 react-dom@18
+	npm install @contentful/rich-text-react-renderer
+```
 
 Next, to run the development server:
 
