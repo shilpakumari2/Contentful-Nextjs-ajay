@@ -1,30 +1,34 @@
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';  // Import for rendering RichText
-import client from '../lib/contentful';
-import styles from '../styles/Home.css';
+import Home from '@/components/HomePage';
+import Hero from '../components/HeroBanner'; 
+import client from '@/lib/contentful'; 
+import styles from '../styles/Home.css';  
 
-
-const Home = ({ homePage }) => {
+const Main = ({ homePage, heroBanner }) => {
   return (
-    <div>
-      <h1 id='homePageTitle' className={styles.title}>{homePage.fields.homePageTitle}</h1>
-      <div id='homePagedescription' className={styles.description}>
-        {documentToReactComponents(homePage.fields.homePageDescription)}
-      </div>
+    <div className={styles.container}>
+      <Home homePage={homePage} />
+      <Hero heroBanner={heroBanner} />
     </div>
   );
 };
 
 export async function getStaticProps() {
   try {
-    const res = await client.getEntries({
+
+    const resHome = await client.getEntries({
       content_type: 'homePage',  
     });
 
-    const homePage = res.items[0];
+    const res = await client.getEntries({
+      content_type: 'heroBanner',
+    });
 
+    const homePage = resHome.items[0];
+    const heroBanner = res.items[0]; 
     return {
       props: {
-        homePage,  
+        homePage,
+        heroBanner,
       },
     };
   } catch (error) {
@@ -32,9 +36,10 @@ export async function getStaticProps() {
     return {
       props: {
         homePage: null,
+        heroBanner: null, 
       },
     };
   }
 }
 
-export default Home;
+export default Main;
