@@ -1,11 +1,10 @@
 import Home from '@/components/HomePage';
 import Hero from '../components/HeroBanner'; 
 import client from '@/lib/contentful'; 
-import styles from '../styles/Home.css';  
 
 const Main = ({ homePage, heroBanner }) => {
   return (
-    <div className={styles.container}>
+    <div className="container">
       <Home homePage={homePage} />
       <Hero heroBanner={heroBanner} />
     </div>
